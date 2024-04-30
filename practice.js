@@ -184,13 +184,7 @@ for (const value in deleteTheBigNumbers) {
       delete deleteTheBigNumbers[value];
     }
   }
-/*
-  Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
 
-  You can refresh the page at any time to re-run all the tests.
-*/
 
 /// ////////////// PROBLEM 11 ///////////////////
 
@@ -304,6 +298,9 @@ const employees = [
 */
 
 //Code Here
+function employeeUpdater(){
+
+}
 
 /// ////////////// PROBLEM 16 ///////////////////
 
@@ -330,8 +327,8 @@ const cat = {
 */
 
 //Code Here
-let grumpyActivity;
-let fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
 
 /// ////////////// PROBLEM 17 ///////////////////
 
@@ -370,6 +367,11 @@ const myCar = {
 */
 
 //Code Here
+function recordCleaner(){
+  for (const accidents of myCar.accidents){
+    accidents.atFaultForAccident = false;
+  }
+}
 
 /// ////////////// PROBLEM 18 ///////////////////
 
@@ -388,6 +390,16 @@ const myCar = {
 */
 
 //Code Here
+//Why does this work?
+function largeNumbers(obj){
+  const { first, second, third } = obj;
+  return Math.min(first, second, third);
+}
+//I think this is the intended function
+function largeNumbers({ first, second, third }){
+  return Math.min(first, second, third);
+}
+
 
 /// ////////////// PROBLEM 19 ///////////////////
 
@@ -398,3 +410,10 @@ const myCar = {
 */
 
 //Code Here
+function numberGroups({ a, b, c }){
+return Math.max(a, b, c);
+}
+
+/*
+Need Clarification on Questions 7, 14, 15, 19
+*/
