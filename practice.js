@@ -158,6 +158,10 @@ function makeCard(cardNumber, expirationDate, securityCode){
 */
 
 //Code Here
+function removePassword(obj){
+  delete obj.password;
+  return obj;
+}
 
 /// ////////////// PROBLEM 10 ///////////////////
 
@@ -175,7 +179,11 @@ const deleteTheBigNumbers = {
 */
 
 //Code Here
-
+for (const value in deleteTheBigNumbers) {
+    if (deleteTheBigNumbers[value] > 100) {
+      delete deleteTheBigNumbers[value];
+    }
+  }
 /*
   Once you complete a problem, refresh ./destructuring.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
@@ -200,6 +208,7 @@ const carDetails = {
 */
 
 //Code Here
+const { color, make, model, year } = carDetails
 
 /// ////////////// PROBLEM 12 ///////////////////
 
@@ -211,7 +220,7 @@ const carDetails = {
 
 function greeting(obj) {
   //Code Here
-
+const { firstName, lastName, title } = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -228,7 +237,10 @@ function greeting(obj) {
 */
 
 //Code Here
-
+function totalPopulation(obj){
+  const { utah, california, texas, arizona} = obj;
+  return utah + california + texas + arizona;
+}
 /// ////////////// PROBLEM 14 ///////////////////
 
 /*
@@ -240,6 +252,12 @@ function greeting(obj) {
 */
 
 //Code Here
+function usCanadaBorder(latLong){
+  const [latitude, longitude] = latLong;
+  if (latitude === 49 && longitude >= -123 && latitude <= -95){
+    return true;
+  }
+}
 
 /// ////////////// PROBLEM 15 ///////////////////
 
