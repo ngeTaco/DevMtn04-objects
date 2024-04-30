@@ -99,6 +99,14 @@ function addToCart(item, quantity) {
 */
 
 //Code Here
+function greaterThan10(obj){
+  for (const value in obj) {
+    if (obj[value] > 10) {
+      obj[value] = 0;
+    }
+  }
+  return obj;
+}
 
 /// ////////////// PROBLEM 6 ///////////////////
 
