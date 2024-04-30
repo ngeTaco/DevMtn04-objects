@@ -73,6 +73,8 @@ const user2 = {
 */
 
 //Code Here
+user2.name = "Bryan G. Smith";
+user2.email = "bryan.smith@devmounta.in";
 
 /// ////////////// PROBLEM 4 ///////////////////
 
@@ -84,6 +86,9 @@ let shoppingCart = {};
 */
 
 //Code Here
+function addToCart({ item, quantity}) {
+  shoppingCart.item = quantity
+};
 
 /// ////////////// PROBLEM 5 ///////////////////
 
