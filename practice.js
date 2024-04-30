@@ -86,8 +86,8 @@ let shoppingCart = {};
 */
 
 //Code Here
-function addToCart({ item, quantity}) {
-  shoppingCart.item = quantity
+function addToCart(item, quantity) {
+  shoppingCart[item] = quantity
 };
 
 /// ////////////// PROBLEM 5 ///////////////////
