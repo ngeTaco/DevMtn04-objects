@@ -117,7 +117,12 @@ function greaterThan10(obj){
 */
 
 //Code Here
-
+function double(obj){
+  for (const value in obj) {
+    obj[value] *= 2;
+  }
+  return obj;
+}
 /// ////////////// PROBLEM 7 ///////////////////
 
 /*
