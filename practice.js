@@ -248,9 +248,9 @@ function totalPopulation(obj){
 //Code Here
 function usCanadaBorder(latLong){
   const [latitude, longitude] = latLong;
-  if (latitude === 49 && longitude >= -123 && latitude <= -95){
+  if (latitude === 49 && longitude >= -123 && longitude <= -95){
     return true;
-  }
+  } else {return false};
 }
 
 /// ////////////// PROBLEM 15 ///////////////////
