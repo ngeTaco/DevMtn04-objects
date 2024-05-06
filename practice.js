@@ -422,9 +422,8 @@ function largeNumbers({ first, second, third }){
 
 //Code Here
 function numberGroups({ a, b, c }){
-return Math.max(a, b, c);
+if (a.length > b.length) {
+  return a.length > c.length ? a : c;
 }
-
-/*
-Need Clarification on Questions 7, 14, 15, 19
-*/
+return b.length > c.length ? b : c;
+}
