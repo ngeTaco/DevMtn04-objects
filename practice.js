@@ -131,6 +131,11 @@ function double(obj){
 
 function showValues(obj) {
   //Code Here
+  let listValue = "";
+  for (const value of Object.values(obj)) {
+    listValue += String(value);
+  }
+  return listValue;
 }
 
 /// ////////////// PROBLEM 8 ///////////////////
@@ -248,9 +253,9 @@ function totalPopulation(obj){
 //Code Here
 function usCanadaBorder(latLong){
   const [latitude, longitude] = latLong;
-  if (latitude === 49 && longitude >= -123 && latitude <= -95){
+  if (latitude === 49 && longitude >= -123 && longitude <= -95){
     return true;
-  }
+  } else {return false};
 }
 
 /// ////////////// PROBLEM 15 ///////////////////
@@ -299,7 +304,13 @@ const employees = [
 
 //Code Here
 function employeeUpdater(){
-
+  const newEmps = employees.filter((emp) => emp.firstName != 'Theo');
+  for (const employee of newEmps) {
+    if (employee.firstName === 'Lorie') {
+      employee.department = 'HR';
+    }
+  }
+  return newEmps;
 }
 
 /// ////////////// PROBLEM 16 ///////////////////
